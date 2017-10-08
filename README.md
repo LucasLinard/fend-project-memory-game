@@ -18,7 +18,7 @@ The game ends when you match all 8 pairs of cards.
 You can restart the game by clicking on the reset button at the top right corner.
 
 You will loose one star for every 12 moves. You use one move each time you flip two cards.
-At the end of the gam you will see your score results.
+At the end of the game you will see your score results.
 
 ## Contributing
 
