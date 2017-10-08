@@ -152,7 +152,7 @@ function addToOpenedCards(card) {
             matchCard(openedCards[1]);
             matches++;
             resetPair = false;
-            if (matches == 1) {
+            if (matches == 8) {
                 chronoStop();
                 document.getElementById("end-time").innerHTML = time
                 document.getElementById("end-moves").innerHTML = count + " moves"
@@ -179,7 +179,6 @@ function chrono(){
     var msec = diff.getMilliseconds()
     var sec = diff.getSeconds()
     var min = diff.getMinutes()
-    var hr = diff.getHours()-1
     if (min < 10){
         min = "0" + min
     }
@@ -192,7 +191,7 @@ function chrono(){
     else if(msec < 100){
         msec = "0" +msec
     }
-    time = hr + ":" + min + ":" + sec + ":" + msec
+    time = min + ":" + sec + ":" + msec
     document.getElementById("chronotime").innerHTML = time
     timerID = setTimeout("chrono()", 10)
 }
@@ -205,6 +204,6 @@ function chronoStop(){
     clearTimeout(timerID)
 }
 function chronoReset(){
-    document.getElementById("chronotime").innerHTML = "0:00:00:000"
+    document.getElementById("chronotime").innerHTML = "00:00:000"
     start = new Date()
 }
